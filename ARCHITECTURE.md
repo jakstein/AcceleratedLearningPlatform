@@ -57,6 +57,8 @@ The platform is a single-page application (SPA) for learning any subject. It fea
     ├── modules/
     │   ├── module-01-introduction.js
     │   ├── module-02-example-topic.js
+    │   ├── module-97-assignments.js   # AI-powered assignment generator
+    │   ├── module-98-tests.js         # Interactive test generator
     │   └── module-99-interview-questions.js
     └── utils/
         ├── math-utils.js         # Math functions
@@ -81,6 +83,9 @@ Scripts must be loaded in this order in `index.html`:
 <script src="js/modules/module-01-introduction.js"></script>
 <script src="js/modules/module-02-example-topic.js"></script>
 <!-- ... more modules ... -->
+<script src="js/modules/module-97-assignments.js"></script>
+<script src="js/modules/module-98-tests.js"></script>
+<script src="js/modules/module-99-interview-questions.js"></script>
 
 <!-- 4. Chat helper and main app (LAST) -->
 <script src="js/chat-helper.js"></script>
@@ -702,8 +707,54 @@ For implementation examples, see:
 
 - **module-01-introduction.js** - Basic content patterns, formatting examples
 - **module-02-example-topic.js** - Canvas interactive, sliders, animation
+- **module-97-assignments.js** - AI-powered assignment generator with LLM grading
+- **module-98-tests.js** - Interactive test generator with multiple question types
 - **module-99-interview-questions.js** - Q&A reveal pattern
 
 ---
 
-*Template Version 1.0*
+## Special Modules (97-98)
+
+### Module 97: AI Assignment Generator
+
+Generates open-ended assignments based on selected modules with LLM-powered grading.
+
+**Features:**
+- Module selection grid to choose topic areas
+- Configurable number of tasks (1-10)
+- AI grading with rubric (scores 1-5 per task)
+- Persistent chat context for follow-up questions
+- Feedback with strengths, improvements, and suggestions
+
+**Key Functions:**
+- `generateAssignment()` - Creates assignment via LLM based on selected modules
+- `submitAssignment()` - Submits work for AI grading
+- `sendFollowup()` - Continues conversation about the assignment
+
+### Module 98: Interactive Test Generator
+
+Generates quizzes with 5 question types and hybrid grading (local + LLM).
+
+**Question Types:**
+- Single Choice (radio buttons)
+- Multiple Choice (checkboxes)
+- Open Answer (text area, LLM-graded)
+- True/False
+- Fill in the Blank
+
+**Features:**
+- Module-based topic selection
+- Configurable question count (5-20)
+- Local grading for objective questions (instant)
+- LLM grading for open-ended questions
+- Detailed results with correct answers shown
+
+**Key Functions:**
+- `generateTest()` - Creates quiz via LLM
+- `submitTest()` - Grades answers (local + LLM hybrid)
+- `gradeTestLocally()` - Scores objective questions
+- `gradeTestWithLLM()` - Evaluates open-ended responses
+
+---
+
+*Template Version 1.1*

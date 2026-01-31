@@ -156,9 +156,10 @@ Then add it to `index.html`:
 ### 6. Delete Example Modules (Optional)
 
 Once you understand the patterns, you can:
-1. Delete `module-01-introduction.js`, `module-02-example-topic.js`, `module-99-interview-questions.js`
+1. Delete the example modules (`module-01-introduction.js`, `module-02-example-topic.js`, `module-99-interview-questions.js`)
 2. Remove their `<script>` tags from `index.html`
-3. Create your own modules following the templates
+3. Keep `module-97-assignments.js` and `module-98-tests.js` for AI-powered assignments and tests
+4. Create your own modules following the templates
 
 ---
 
@@ -322,6 +323,39 @@ content: `
 
 The interview module uses a special format with reveal buttons for Good Answer, Bad Answer, and Key Takeaways. Questions are stored in a `questions` object and rendered dynamically. If you don't care about interview-tailored content, you can skip this part. In fact you can just delete `module-99-interview-questions.js` entirely. I do think that it's still useful even if not applying for interview, as it's a good way to just test own knowledge.
 
+### AI Assignment Generator (Module 97)
+
+Module 97 provides an AI-powered assignment generator with grading and follow-up conversation:
+
+**Features:**
+- Select which modules to cover in the assignment
+- Configure number of tasks (1-10)
+- AI generates open-ended tasks based on selected topics
+- Submit your work for LLM grading with rubric (1-5 per task)
+- Ask follow-up questions about the assignment or feedback
+
+**Usage:** Navigate to the Assignment Generator in the Advanced section. Select modules, set task count, and click Generate. Keep in mind you may want to use a relatively smart model for this since structured output is required.
+
+### Interactive Test Generator (Module 98)
+
+Module 98 provides an interactive quiz generator with multiple question types:
+
+**Question Types:**
+- Single Choice (one correct answer)
+- Multiple Choice (multiple correct answers)
+- Open Answer (free text, LLM-graded)
+- True/False
+- Fill in the Blank
+
+**Features:**
+- Select modules to cover in the test
+- Configure number of questions (5-20)
+- Instant local grading for objective questions
+- LLM grading for open-ended responses
+- Detailed results showing correct answers
+
+**Usage:** Navigate to the Test Generator in the Advanced section. Select modules, set question count, and click Generate Test. Keep in mind you may want to use a relatively smart model for this since structured output is required.
+
 **Question data structure:**
 ```javascript
 questions: {
@@ -399,6 +433,8 @@ The module's `renderAllQuestions()` and `setupRevealButtons()` methods handle th
 | `js/chat-helper.js` | AI chat | ✅ Yes - system prompt |
 | `js/utils/*.js` | Utility functions | ⚪ Optional - add your own |
 | `js/modules/*.js` | Your content | ✅ Yes - add your modules |
+| `js/modules/module-97-assignments.js` | AI assignment generator | ⚪ Optional - keep or delete |
+| `js/modules/module-98-tests.js` | Interactive test generator | ⚪ Optional - keep or delete |
 
 ---
 

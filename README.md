@@ -13,8 +13,14 @@ I'm learning robotics, but I was struggling with understanding several concepts 
 - **AI Chat Assistant** - Integrated LLM tutor powered by LM Studio (OpenAI-compatible API). Supports contextual help based on current module and selected text.
 - **Math Rendering** - KaTeX support for LaTeX-style equations
 - **Interview Prep Mode** - Built-in Q&A reveal pattern for self-testing
+- **AI Assignment Generator** - LLM-powered assignments with grading and feedback (Module 97)
+- **Interactive Test Generator** - Auto-generated quizzes with multiple question types (Module 98)
 - **Progress Tracking** - Visual progress bar and navigation
 - **Fully Customizable** - Easy to brand and extend for any subject
+
+## Changelog
+- 2026-01-31: Added AI assignment generator (module 97) and interactive test generator (module 98).
+
 
 ## Screenshots
 
@@ -29,6 +35,12 @@ The following screenshots are from a properly developed version of the platform.
 [![image.png](https://i.postimg.cc/bNyrcv0M/image.png)](https://postimg.cc/3WqY2YcC)
 
 [![image.png](https://i.postimg.cc/gkVV4rz8/image.png)](https://postimg.cc/Lnsg89Z8)
+
+[![image.png](https://i.postimg.cc/8cWNq83R/image.png)](https://postimg.cc/rR8BrHqs)
+
+[![image.png](https://i.postimg.cc/7Lm6Vk8f/image.png)](https://postimg.cc/4KHsfj3g)
+
+[![image.png](https://i.postimg.cc/26g2Vg5F/image.png)](https://postimg.cc/62LdPjny)
 
 ## Tech Stack
 
@@ -99,6 +111,8 @@ In general I'd say this approach works quite well and basically all information 
     ├── modules/               # Your content modules
     │   ├── module-01-introduction.js
     │   ├── module-02-example-topic.js
+    │   ├── module-97-assignments.js   # AI assignment generator
+    │   ├── module-98-tests.js         # Interactive test generator
     │   └── module-99-interview-questions.js
     └── utils/                 # Utility libraries
         ├── math-utils.js      # Math & vector operations
@@ -186,8 +200,6 @@ init: function() {
 
 ## Future plans
 
-- Interactive homework assignments with auto-grading using LMStudio.
-- Automatically generated tests based on module content.
 - RAG capabilities for AI chat to access external resources (e.g. Wikipedia, Arxiv, etc).
 - Unlikely but whiteboard mode for questions about specific scenarios, to be presented to the LLM as images.
 

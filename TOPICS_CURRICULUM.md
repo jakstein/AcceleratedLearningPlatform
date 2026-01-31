@@ -36,6 +36,8 @@ Track your module development progress here.
 |---|-------|--------|-------|
 | 90 | Advanced Topic A | ⬜ | |
 | 91 | Advanced Topic B | ⬜ | |
+| 97 | AI Assignment Generator | ✅ | LLM-powered assignments with grading |
+| 98 | Interactive Test Generator | ✅ | Quiz with multiple question types |
 | 99 | Interview Preparation | ✅ | Q&A format example |
 
 ---
@@ -60,6 +62,8 @@ Track your module development progress here.
 | # | Topic | Status | Notes |
 |---|-------|--------|-------|
 | 90 | | ⬜ | |
+| 97 | AI Assignment Generator | ✅ | Built-in - generates tasks from modules |
+| 98 | Interactive Test Generator | ✅ | Built-in - generates quizzes from modules |
 | 99 | Interview Questions | ⬜ | |
 
 ---
